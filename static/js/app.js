@@ -26,12 +26,12 @@ data.forEach((dataRow) => {
 function handleClick() {
     // Grab the datetime value from the filter
     let date = d3.select('#datetime').property('value');
-    let filterData = tableData;
+    let filteredData = tableData;
 
     // Check to see if a date was entered and filter the data using that date
     if (date) {
         // Apply 'filter' to the table data to only keep the rows where the 'datetime' value matches the filter value
-        filteredData = fitleredData.filter(row => row.datetime === date);
+        filteredData = filteredData.filter(row => row.datetime === date);
     }
 
     //Rebuild the table using filtered data @Note: if no date was entered, then filteredData will just be the original tableData
